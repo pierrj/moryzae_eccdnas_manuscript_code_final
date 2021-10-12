@@ -34,7 +34,6 @@ cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/human/ecc_caller_v_moller_20
 cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/lengths/length_dsn.Rmd pipeline_qc/lengths/length_dsn.Rmd
 cp KVK-lab-scripts/slurm/length_dsn.slurm pipeline_qc/lengths/length_dsn.slurm
 cp KVK-lab-scripts/bash/ecc_caller_mapq0_no_rm.sh pipeline_qc/lengths/ecc_caller_mapq0_no_rm.sh
-cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/pacbio/pacbio_v_illumina_eccs.ipynb pipeline_qc/pacbio/pacbio_v_illumina_eccs.ipynb
 cp KVK-lab-scripts/slurm/get_split_reads_no_confirm.slurm pipeline_qc/pacbio/get_split_reads_no_confirm.slurm
 cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/qpcr/qpcr_linear_dna_depletion_boxplot.R pipeline_qc/qpcr/qpcr_linear_dna_depletion_boxplot.R
 cp KVK-lab-scripts/slurm/wgs_count_comparison.slurm pipeline_qc/wgs/wgs_count_comparison.slurm
@@ -121,3 +120,19 @@ cp KVK-lab-scripts/slurm/effectors_on_eccdnas_final.slurm effectors_on_eccdnas/e
 
 cp KVK-lab-scripts/python/coverage_confirm_nodb_nomerge.py ecc_calling_illumina/called_scripts/coverage_confirm_nodb_nomerge.py
 cp moryzae_eccdnas_manuscript_analysis_and_plots/gene_analysis/common_genes/minichromosome/minichromosome_genes_on_eccdnas_analysis.Rmd eccdna_associated/minichromosome/minichromosome_genes_on_eccdnas_analysis.Rmd
+
+cp moryzae_eccdnas_manuscript_analysis_and_plots/comparative/count_comparison/ecc_count_comparison_abstract.Rmd organism_comparisons/ecc_count_comparison_abstract.Rmd
+
+cp KVK-lab-scripts/slurm/junction_split_reads_per_sample.slurm pipeline_qc/wgs/junction_split_reads_per_sample.slurm
+
+cp KVK-lab-scripts/slurm/Pacbio_v_illumina_eccs.slurm pipeline_qc/pacbio/Pacbio_v_illumina_eccs.slurm
+cp KVK-lab-scripts/python/Pacbio_v_illumina_eccs.py pipeline_qc/pacbio/Pacbio_v_illumina_eccs.py
+cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/pacbio/Pacbio_v_illumina_eccs.Rmd pipeline_qc/pacbio/Pacbio_v_illumina_eccs.Rmd
+
+cp moryzae_eccdnas_manuscript_analysis_and_plots/figures/tables/table_making.Rmd pipeline_qc/table_making.Rmd
+
+cp moryzae_eccdnas_manuscript_analysis_and_plots/gene_analysis/coverage_plots/coverage_plot_ggplot_effectors.Rmd effectors_on_eccdnas/coverage_plot_ggplot_effectors.Rmd
+
+cp moryzae_eccdnas_manuscript_analysis_and_plots/gene_analysis/coverage_plots/coverage_plot_ggplot_never_v_common.Rmd eccdna_associated/coverage_plot_ggplot_never_v_common.Rmd
+
+cp KVK-lab-scripts/slurm/guy11_to_70-15_names.slurm eccdna_associated/guy11_to_70-15_names.slurm
