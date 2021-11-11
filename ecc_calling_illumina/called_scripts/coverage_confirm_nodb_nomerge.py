@@ -1,3 +1,24 @@
+#MIT License
+#
+#Copyright (c) 2021 Pierre Michel Joubert
+#
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+#
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+#
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
 import sys
 import csv
 import numpy as np
@@ -18,7 +39,7 @@ output_name = str(sys.argv[1])
 output_number = str(sys.argv[2])
 bam_file = str(sys.argv[3])
 
-# read in output from cluster_eccs.py, input must be named merged.confirmed with chunk number for parallelization
+# read in output from splitread calls, input must be named merged.confirmed with chunk number for parallelization
 with open('merged.confirmed'+output_number) as merged:
     merged_reader = csv.reader(merged, delimiter = '\t')
     flat_merged_list = [[int(row[0]), int(row[1]), int(row[2]), int(row[3])] for row in merged_reader]
