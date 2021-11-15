@@ -138,3 +138,7 @@ cp KVK-lab-scripts/slurm/guy11_to_70-15_names.slurm eccdna_associated/guy11_to_7
 
 cp KVK-lab-scripts/bash/get_ltr_sr_circle_count_per_element.sh ltr_retrotransposons/ltr_split_reads/get_ltr_sr_circle_count_per_element.sh
 cp KVK-lab-scripts/python/get_other_locs_for_ltr_srs.py ltr_retrotransposons/ltr_split_reads/get_other_locs_for_ltr_srs.py
+
+cp KVK-lab-scripts/bash/primer3_junction_primers.sh pipeline_qc/junction_pcr/primer3_junction_primers.sh
+cp KVK-lab-scripts/slurm/validate_sanger.slurm pipeline_qc/junction_pcr/validate_sanger.slurm
+cp KVK-lab-scripts/slurm/primer3_effector_circle_validations.slurm pipeline_qc/junction_pcr/primer3_effector_circle_validations.slurm
