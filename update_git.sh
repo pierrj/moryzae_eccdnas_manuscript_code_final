@@ -142,3 +142,5 @@ cp KVK-lab-scripts/python/get_other_locs_for_ltr_srs.py ltr_retrotransposons/ltr
 cp KVK-lab-scripts/bash/primer3_junction_primers.sh pipeline_qc/junction_pcr/primer3_junction_primers.sh
 cp KVK-lab-scripts/slurm/validate_sanger.slurm pipeline_qc/junction_pcr/validate_sanger.slurm
 cp KVK-lab-scripts/slurm/primer3_effector_circle_validations.slurm pipeline_qc/junction_pcr/primer3_effector_circle_validations.slurm
+
+cp KVK-lab-scripts/python/ecc_caller_pacbio_splitreadout.py effectors_on_eccdnas/ecc_caller_pacbio_splitreadout.py
