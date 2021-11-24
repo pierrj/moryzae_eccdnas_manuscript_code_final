@@ -80,7 +80,7 @@ if [ -f "cov_perfeature_table" ]; then
     rm cov_perfeature_table
 fi
 
-touch cov_perfeature_table
+awk '{print $1}' junction_sr_cov_perfeature_normalized > cov_perfeature_table
 
 while read results; do
     # move results around
@@ -93,7 +93,7 @@ while read results; do
     # make normalization table
     while read sample; do
         ## normalization is a little tricky here but simplest is to just go by number of reads
-        total=$( samtools view -c /global/scratch/users/pierrj/eccDNA/magnaporthe_pureculture/illumina/${sample}/no_secondary.filtered.sorted.${sample}.bam | awk '{print $1/1000000}')
+        total=$( samtools view -c -F 4 -F 2048 /global/scratch/users/pierrj/eccDNA/magnaporthe_pureculture/illumina/${sample}/no_secondary.filtered.sorted.${sample}.bam | awk '{print $1/1000000}')
         echo -e ${sample}'\t'${total} >> G3.normalization_table.${results}
     done < /global/scratch/users/pierrj/eccDNA/magnaporthe_pureculture/illumina/mapfile
     # normalize and average
@@ -105,6 +105,22 @@ while read results; do
     mv tmptable cov_perfeature_table
 done < results_mapfile
 
+
 # make final table
-paste <(awk '{print $1}' junction_sr_cov_perfeature_normalized) cov_perfeature_table > tmptable
-mv tmptable cov_feature_table
+cp cov_perfeature_table cov_feature_table
+
+# these are all the same
+# table for read normalization
+cp G3.normalization_table.ltr_sr_cov_perfeature G3.normalization_table
+
+## make cov_feature_table per sample, dont normalize though
+while read sample; do
+    if [ -f "${sample}.cov_perfeature_table" ]; then
+        rm ${sample}.cov_perfeature_table
+    fi
+    awk '{print $1}' G3_1A/G3_1A.ltr_sr_cov_perfeature > ${sample}.cov_perfeature_table
+    while read results; do
+        paste ${sample}.cov_perfeature_table <( awk '{print $2}' ${sample}/${sample}.${results}) > ${sample}.tmptable
+        mv ${sample}.tmptable ${sample}.cov_perfeature_table
+    done < results_mapfile
+done < /global/scratch/users/pierrj/eccDNA/magnaporthe_pureculture/illumina/mapfile

@@ -44,11 +44,12 @@ fi
 while read sample; do
     cd ${sample}
         # count reads
-        read_count=$(samtools view -c no_secondary.filtered.sorted.${sample}.bam)
+        read_count=$(samtools view -c -F 4 -F 2048 no_secondary.filtered.sorted.${sample}.bam)
         # count srs
         sr_count=$(wc -l ${sample}.ecc_caller_out.splitreads.bed | awk '{print $1}')
         echo -e ${sample}'\t'${read_count}'\t'${sr_count} >> /global/scratch/users/pierrj/eccDNA/magnaporthe_pureculture/illumina/srs_per_reads
     cd ..
 done < mapfile
 
-awk '{print $3/$2}' ${output_table} | awk '{SUM+=$1} END {print SUM/NR}'
+
+awk '{print $3/$2*1000000}' ${output_table} | awk '{SUM+=$1} END {print SUM/NR}'

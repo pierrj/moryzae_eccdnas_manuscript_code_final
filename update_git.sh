@@ -144,3 +144,5 @@ cp KVK-lab-scripts/slurm/validate_sanger.slurm pipeline_qc/junction_pcr/validate
 cp KVK-lab-scripts/slurm/primer3_effector_circle_validations.slurm pipeline_qc/junction_pcr/primer3_effector_circle_validations.slurm
 
 cp KVK-lab-scripts/python/ecc_caller_pacbio_splitreadout.py effectors_on_eccdnas/ecc_caller_pacbio_splitreadout.py
+
+cp moryzae_eccdnas_manuscript_analysis_and_plots/ltr_splitreads/profile_plots/ltr_profile_plots.Rmd ltr_retrotransposons/ltr_split_reads/ltr_profile_plots.Rmd

@@ -45,7 +45,7 @@ effector = function(x, output) {
 
 df <- df[df$V3 != 0,]
 
-df$V3 <- log(df$V3)
+df$V3 <- log10(df$V3)
 
 df$V4 <- apply(df, 1, effector)
 
@@ -60,7 +60,8 @@ labs <- c("Other genes", "Predicted effectors")
 
 # boxplot of encompassing split reads for effectors and non effectors
 
-p <- ggplot(df, aes(x=effector, y=srs)) + geom_boxplot() + theme_classic() + ylab('Log 10 normalized \nencompassing splitreads') + xlab('') + scale_x_discrete(labels= labs)+
+p <- ggplot(df, aes(x=effector, y=srs)) + geom_boxplot() + theme_classic() + ylab('Normalized encompassing \nsplit read count') + xlab('') + scale_x_discrete(labels= labs)+
+    scale_y_continuous(labels=c(0.01,0.1,1,10), breaks = c(-2,-1,0,1))+
   theme(axis.text=element_text(size=6),axis.title=element_text(size=8) , legend.title=element_text(size=8), legend.position = 'bottom', legend.text=element_text(size=6))
 
 
