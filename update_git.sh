@@ -133,21 +133,19 @@ cp KVK-lab-scripts/slurm/guy11_to_70-15_names.slurm eccdna_associated/guy11_to_7
 cp KVK-lab-scripts/bash/get_ltr_sr_circle_count_per_element.sh ltr_retrotransposons/ltr_split_reads/get_ltr_sr_circle_count_per_element.sh
 cp KVK-lab-scripts/python/get_other_locs_for_ltr_srs.py ltr_retrotransposons/ltr_split_reads/get_other_locs_for_ltr_srs.py
 
-cp KVK-lab-scripts/bash/primer3_junction_primers.sh pipeline_qc/junction_pcr/primer3_junction_primers.sh
-cp KVK-lab-scripts/slurm/validate_sanger.slurm pipeline_qc/junction_pcr/validate_sanger.slurm
-cp KVK-lab-scripts/slurm/primer3_effector_circle_validations.slurm pipeline_qc/junction_pcr/primer3_effector_circle_validations.slurm
+cp KVK-lab-scripts/bash/primer3_junction_primers.sh pipeline_qc/pcr/primer3_junction_primers.sh
+cp KVK-lab-scripts/slurm/validate_sanger.slurm pipeline_qc/pcr/validate_sanger.slurm
+cp KVK-lab-scripts/slurm/primer3_effector_circle_validations.slurm pipeline_qc/pcr/primer3_effector_circle_validations.slurm
 
 cp KVK-lab-scripts/python/ecc_caller_pacbio_splitreadout.py effectors_on_eccdnas/ecc_caller_pacbio_splitreadout.py
 
 cp moryzae_eccdnas_manuscript_analysis_and_plots/ltr_splitreads/profile_plots/ltr_profile_plots.Rmd ltr_retrotransposons/ltr_split_reads/ltr_profile_plots.Rmd
 
-cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/reps_overlap/histogram_techrep_and_biorep_overlap.Rmd pipeline_qc/reps_overlap/histogram_techrep_and_biorep_overlap.Rmd
 cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/reps_overlap/pca_coverage_techreps.Rmd pipeline_qc/reps_overlap/pca_coverage_techreps.Rmd
 cp KVK-lab-scripts/slurm/coverage_for_pca.slurm pipeline_qc/reps_overlap/coverage_for_pca.slurm
 cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/reps_overlap/rarefaction_per_tech_rep.Rmd pipeline_qc/reps_overlap/rarefaction_per_tech_rep.Rmd
 cp KVK-lab-scripts/slurm/rarefaction_per_tech_rep.slurm pipeline_qc/reps_overlap/rarefaction_per_tech_rep.slurm
 cp KVK-lab-scripts/slurm/rarefaction_per_sample.slurm pipeline_qc/reps_overlap/rarefaction_per_sample.slurm
-cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/reps_overlap/venn_diagram_stats.ipynb pipeline_qc/reps_overlap/venn_diagram_stats.ipynb
 cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/reps_overlap/venn_diagram_tech_and_biorep_overlaps.Rmd pipeline_qc/reps_overlap/venn_diagram_tech_and_biorep_overlaps.Rmd
 
 cp moryzae_eccdnas_manuscript_analysis_and_plots/gene_analysis/common_genes/overlap_common_genes/venn_diagram_common_genes.Rmd eccdna_associated/venn_diagram_common_genes.Rmd
@@ -161,3 +159,16 @@ cp KVK-lab-scripts/slurm/expression_never_v_common.slurm eccdna_associated/expre
 cp moryzae_eccdnas_manuscript_analysis_and_plots/gene_analysis/neverfound_genes/expression/expression_never_v_common.Rmd eccdna_associated/expression_genome_marks/expression_never_v_common.Rmd
 
 cp KVK-lab-scripts/slurm/ecc_genome_cov_comparison.slurm organism_comparisons/ecc_genome_cov_comparison.slurm
+
+cp KVK-lab-scripts/slurm/primer3_never_found_validation.slurm pipeline_qc/pcr/primer3_never_found_validation.slurm
+
+cp KVK-lab-scripts/python/venn_diagram_stats.py pipeline_qc/reps_overlap/venn_diagram_stats.py
+cp KVK-lab-scripts/python/parse_venn_diagram_stats.py pipeline_qc/reps_overlap/parse_venn_diagram_stats.py
+cp KVK-lab-scripts/slurm/venn_diagram_stats.slurm pipeline_qc/reps_overlap/venn_diagram_stats.slurm
+cp moryzae_eccdnas_manuscript_analysis_and_plots/qc/reps_overlap/plot_techrep_and_biorep_overlap_v_shuffled.Rmd pipeline_qc/reps_overlap/plot_techrep_and_biorep_overlap_v_shuffled.Rmd
+
+cp KVK-lab-scripts/slurm/parse_pannzer_out.slurm eccdna_absent/parse_pannzer_out.slurm
+cp KVK-lab-scripts/python/parse_pannzer_output.py eccdna_absent/parse_pannzer_output.py
+
+cp KVK-lab-scripts/slurm/parse_pannzer_out.slurm eccdna_associated/parse_pannzer_out.slurm
+cp KVK-lab-scripts/python/parse_pannzer_output.py eccdna_associated/parse_pannzer_output.py
