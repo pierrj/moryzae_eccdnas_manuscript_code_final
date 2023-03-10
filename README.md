@@ -14,7 +14,8 @@ The update_git.sh script as well as the two submodules are simply used by me to 
 
 For acknowledgments, citations, and software versions, please refer to the manuscript:
 
-Preprint will be posted to bioRxiv shortly
+The manuscript has now been published here:
+[https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-022-01457-2](The extrachromosomal circular DNAs of the rice blast pathogen Magnaporthe oryzae contain a wide variety of LTR retrotransposons, genes, and effectors)
 
 ## ecc_caller
 
